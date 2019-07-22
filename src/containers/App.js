@@ -12,17 +12,20 @@ class App extends React.Component {
             data: [{
                   id: 22,
                   number: 1,
-                  text: "Ola"
+                  text: "Ola",
+                  remove: this.removeTodo.bind(this)
                 },
                 {
                   id: 23,
                   number: 2,
-                  text: "Zosia"
+                  text: "Zosia",
+                  remove: this.removeTodo.bind(this)
                 },
                 {
                   id: 24,
                   number: 3,
-                  text: "Kasia"
+                  text: "Kasia",
+                  remove: this.removeTodo.bind(this)
                 }
             ]
         };
