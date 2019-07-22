@@ -13,19 +13,19 @@ class App extends React.Component {
                   id: 22,
                   number: 1,
                   text: "Ola",
-                  remove: this.removeTodo.bind(this)
+                  //remove: this.removeTodo.bind(this)
                 },
                 {
                   id: 23,
                   number: 2,
                   text: "Zosia",
-                  remove: this.removeTodo.bind(this)
+                  //remove: this.removeTodo.bind(this)
                 },
                 {
                   id: 24,
                   number: 3,
                   text: "Kasia",
-                  remove: this.removeTodo.bind(this)
+                  //remove: this.removeTodo.bind(this)
                 }
             ]
         };
