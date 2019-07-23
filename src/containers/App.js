@@ -13,23 +13,21 @@ class App extends React.Component {
                   id: 22,
                   number: 1,
                   text: "Ola",
-                  //remove: this.removeTodo.bind(this)
                 },
                 {
                   id: 23,
                   number: 2,
                   text: "Zosia",
-                  //remove: this.removeTodo.bind(this)
                 },
                 {
                   id: 24,
                   number: 3,
                   text: "Kasia",
-                  //remove: this.removeTodo.bind(this)
                 }
             ]
         };
     }
+
     addTodo(val){
         const todo = {
             text: val,
@@ -38,15 +36,17 @@ class App extends React.Component {
         const data = [...this.state.data, todo];
         this.setState({data});
     }
+
     removeTodo(id) {
         const remainder = this.state.data.filter(todo => todo.id !== id);
         this.setState({data: remainder});
     }
+    
     render() {
         return (
             <div className={style.TodoApp}>
                 <Title title="Title in webpack" taskNumber={this.state.data.length}></Title>
-                <TodoApp name="This is list of id" list={this.state.data}></TodoApp>
+                <TodoApp name="This is list of id" list={this.state.data} remove={this.removeTodo.bind(this)}></TodoApp>
             </div>
         );
     }
